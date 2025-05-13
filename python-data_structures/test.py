@@ -1,5 +1,5 @@
 #!/usr/bin/python3
 string = "holberton"
-array = [1, 2 , 3]
-for i in array:
-    print(i)
+my_list= [1, 2 , 3]
+for i in string:
+    print(my_list[i])
