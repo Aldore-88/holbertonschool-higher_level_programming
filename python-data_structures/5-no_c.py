@@ -4,4 +4,4 @@ def no_c(string):
     for i in string:
         if i != "c" and i != 'C':
             new_string = new_string + i
-    print(new_string)
+    return (new_string)
