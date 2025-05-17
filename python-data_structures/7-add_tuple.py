@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-# tuple_a = (1, )
-# tuple_b = (2,3)
 def tuple_check(input_tuple):
     if len(input_tuple) == 0:
         input_tuple = (0, 0)
