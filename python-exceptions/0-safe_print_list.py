@@ -1,13 +1,13 @@
 #!/usr/bin/python3
 def safe_print_list(my_list=[], x=0):
-#my_list = [1, 2, 3, 4, 5]
-#x = 7
+    # my_list = [1, 2, 3, 4, 5]
+    # x = 7
     count = 0
     try:
         for i in range(x):
             print(my_list[i], end="")
             count = count + 1
-    except:
+    except IndexError:
         print()
         return (count)
     else:
