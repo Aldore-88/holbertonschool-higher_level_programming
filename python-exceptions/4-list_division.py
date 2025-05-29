@@ -2,7 +2,7 @@
 def list_division(my_list_1, my_list_2, list_length):
     # my_list_1 = [10, 8, 4]
     # my_list_2 = [2, 4, 0, "H", 5]
-    list_length = max(len(my_list_1), len(my_list_2))
+    #list_length = max(len(my_list_1), len(my_list_2))
     total_list = []
 
     for i in range(list_length):
