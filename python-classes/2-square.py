@@ -14,7 +14,7 @@ raise a ValueError exception with the message "size must be >= 0"
 class Square:
     """
     class documentation
-    
+
     raise TypeError when not int
     riase ValueError when less than 0
     """
