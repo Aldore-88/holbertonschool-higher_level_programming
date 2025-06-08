@@ -22,4 +22,3 @@ class Student:
     
     def reload_from_json(self, json):
         """assume json is always dictionary"""
-        
