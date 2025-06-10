@@ -3,7 +3,6 @@
 class Square:
     """
     Declare Square class
-    
     _size(int) - private attibute
     __init__ initiate square
 
@@ -11,7 +10,6 @@ class Square:
     def __init__(self, size=0):
         """
         initialse new square
-        
         """
         if type(size) is not int:
             raise TypeError("size must be an integer")
