@@ -38,7 +38,7 @@ class Square:
         squared = (self.__size ** 2)
         """print("area running")"""
         return squared
-    
+
     def my_print(self):
         """printing square #"""
         if self.__size == 0:
@@ -46,5 +46,5 @@ class Square:
         else:
             for row in range(self.__size):
                 for column in range(self.__size):
-                    print("#", end = "")
+                    print("#", end="")
                 print()
