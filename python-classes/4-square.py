@@ -5,11 +5,11 @@ class Square:
     Declare Square class
     _size(int) - private attibute
     __init__ initiate square
-
     """
     def __init__(self, size=0):
         """
         initialse new square
+        size
         """
         if type(size) is not int:
             raise TypeError("size must be an integer")
@@ -20,7 +20,8 @@ class Square:
     @property
     def size(self):
         """
-        getter size
+        getter
+        size
         """
         sizeB = self.sizeA
         return sizeB
@@ -29,6 +30,7 @@ class Square:
     def size(self, size):
         """
         setter
+        size private??
         """
         if type(size) is not int:
             raise TypeError("size must be an integer")
@@ -39,6 +41,7 @@ class Square:
     def area(self):
         """
         area of square
+        squared size
         """
         squared = (self.sizeA ** 2)
         return squared
