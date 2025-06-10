@@ -15,18 +15,18 @@ class Square:
         if size < 0:
             raise ValueError("size must be >=0")
         self.__size = size
-        print("init running")
+        """print("init running")"""
 
     @property
     def size(self):
         """getter"""
-        print("getter running")
+        """print("getter running")"""
         return self.__size
 
     @size.setter
     def size(self, value):
         """setter size private??"""
-        print("setter running")
+        """print("setter running")"""
         if type(value) is not int:
             raise TypeError("size must be an integer")
         if value < 0:
@@ -36,5 +36,5 @@ class Square:
     def area(self):
         """area of square"""
         squared = (self.__size ** 2)
-        print("area running")
+        """print("area running")"""
         return squared
