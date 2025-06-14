@@ -2,8 +2,10 @@
 """
 0.Lookup
 """
+
+
 def lookup(obj):
     """
-    returns list of attributes and mehtods in object 
+    returns list of attributes and mehtods in object
     """
-    return(dir(obj))
+    return (dir(obj))
