@@ -1,8 +1,14 @@
 #!/usr/bin/python3
 """
-!!!!#### NEED TO MAKE A TEST FILE FOR THIS!!!
+7.Integer validator
 """
+
+
 class BaseGeometry:
+    """
+    integer_validator type and value error checks
+    """
+
     def area(self):
         raise Exception("area() is not implemented")
     
