@@ -1,42 +1,42 @@
 #!/usr/bin/python3
-"""5-text indent"""
+"""
+This module provides a function to print a formatted text with
+two newlines after each occurrence of '.', '?' or ':'.
+
+It ensures that each printed line has no leading or trailing spaces.
+"""
 
 
 def text_indentation(text):
-    """Print text with 2 newlines after each '.', '?', and ':'.
+    """
+    Prints a text with two newlines after each '.', '?' or ':' character.
+
+    The function removes any leading or trailing whitespace from each printed
+    line. It skips any spaces immediately following '.', '?' or ':' to prevent
+    leading spaces in the next printed segment.
 
     Args:
-        text (str): The text to print.
-
+        Test: the given test.
     Raises:
-        TypeError: If text is not a string.
+        TypeError: If the input is not a string.
+
+    Returns:
+        None
     """
     if not isinstance(text, str):
         raise TypeError("text must be a string")
-
+    temp = ""
     i = 0
-    start_of_line = True
-
     while i < len(text):
+        temp += text[i]
         if text[i] in ".?:":
-            print(text[i])
+            print(temp.strip())
             print()
+            temp = ""
             i += 1
-            start_of_line = True
-
-            while i < len(text) and text[i] == ' ':
+            while i < len(text) and text[i] == " ":
                 i += 1
-
-        elif text[i] == ' ' and start_of_line:
-            i += 1
-
-        else:
-            print(text[i], end="")
-            if text[i] != ' ':
-                start_of_line = False
-            i += 1
-
-
-if __name__ == "__main__":
-    import doctest
-    doctest.testfile("tests/5-text_indentation.txt")
+            continue
+        i += 1
+    if temp.strip():
+        print(temp.strip(), end="")
