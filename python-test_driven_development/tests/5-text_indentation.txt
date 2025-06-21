@@ -1,0 +1,27 @@
+Test all delimeter with spaces at ends:
+>>> text_indentation("Hello   :     Holberton    ?    school.    fooo     ")
+Hello:
+<BLANKLINE>
+Holberton?
+<BLANKLINE>
+school.
+<BLANKLINE>
+fooo
+
+Test just delimeter:
+>>> text_indentation(".?:")
+.
+<BLANKLINE>
+?
+<BLANKLINE>
+:
+<BLANKLINE>
+
+Test string with the spaces:
+>>> text_indentation("    Holberton")
+Holberton
+
+Test just delimeters:
+>>> text_indentation("  ?  ")
+?
+<BLANKLINE>
