@@ -27,7 +27,7 @@ class Circle(Shape):
         args:
             radius
         """
-        self.radius = radius
+        self.radius = abs(radius)
 
     def area(self):
         """
@@ -69,7 +69,7 @@ class Rectangle(Shape):
 
     def perimeter(self):
         """calculation of the perimeter of the rectangle"""
-        perimeter = (2 * self.width) + (2 * self.height)
+        perimeter = 2 * (self.width + self.height)
         return perimeter
 
 
