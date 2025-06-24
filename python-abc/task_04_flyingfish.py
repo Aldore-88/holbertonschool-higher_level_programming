@@ -39,7 +39,7 @@ class FlyingFish(Fish, Bird):
         method habitiat of flyingfish -
         overriding parnt classes habitat methods
         """
-        print("The flying fish loves both water and the sky!")
+        print("The flying fish lives both in water and the sky!")
 
     # def __init__(self):
     #     self.habitat()
