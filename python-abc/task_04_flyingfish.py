@@ -32,14 +32,14 @@ class FlyingFish(Fish, Bird):
 
     def swim(self):
         """method swim of flying fish - overriding parent class swim method"""
-        print("The flying fish is swimming")
+        print("The flying fish is swimming!")
 
     def habitat(self):
         """
         method habitiat of flyingfish -
         overriding parnt classes habitat methods
         """
-        print("The flying fish loves both water and the sky")
+        print("The flying fish loves both water and the sky!")
 
     # def __init__(self):
     #     self.habitat()
