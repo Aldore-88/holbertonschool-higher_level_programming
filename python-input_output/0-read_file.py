@@ -8,7 +8,7 @@ def read_file(filename=""):
     """
 
     with open(filename) as file:
-        print(file.read())
+        print(file.read(), end="")
 
     # f = open(filename)
     # print(f.read())
