@@ -4,6 +4,7 @@ import json
 
 
 def load_from_json_file(filename):
+    """loading from json file"""
     with open(filename, "r") as file:
         """reading file"""
         read_data = file.read()
