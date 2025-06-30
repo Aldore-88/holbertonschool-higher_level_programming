@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-from sys import argv
 """7-Load, add, save"""
+from sys import argv
 """
 importing argv from sys library
 to add arguments to python list
