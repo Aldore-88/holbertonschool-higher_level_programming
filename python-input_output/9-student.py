@@ -2,12 +2,12 @@
 """9.Student to JSON"""
 
 class Student:
-    def __init__(self, first_name, last_name, age):
+    def __init__(self, first_name:str, last_name:str, age:int):
         """Student class"""
-        self.__first_name = first_name
-        self.__last_name = last_name
-        self.__age = age
+        self.first_name = first_name
+        self.last_name = last_name
+        self.age = age
 
     def to_json(self):
         """Class to dictionary"""
-        self.__dict__
+        return self.__dict__
