@@ -1,5 +1,9 @@
 #!/usr/bin/python3
 """7-Load, add, save"""
+"""
+importing argv from sys library
+to add arguments to python list
+"""
 from sys import argv
 
 save_file = __import__("5-save_to_json_file").save_to_json_file
@@ -8,6 +12,7 @@ load_file = __import__("6-load_from_json_file").load_from_json_file
 """
 loads the file, if file does not exist then create a new one
 appends the input from the commandline to the file
+append vs extend
 """
 filename = "add_item.json"
 
