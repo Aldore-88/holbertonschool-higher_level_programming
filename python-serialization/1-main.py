@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
-"""1.Pickling Custom Classes"""
-from task_01_pickle import CustomObject
 
+from task_01_pickle import CustomObject
 
 # Create an instance of CustomObject
 obj = CustomObject(name="John", age=25, is_student=True)

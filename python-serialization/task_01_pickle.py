@@ -17,14 +17,20 @@ class CustomObject:
 
     def serialize(self, filename):
         """serialize information byte form to file"""
-        with open(filename, "wb") as file:
-            pickle.dump(self, file)
-            print(file)
+        try:
+            with open(filename, "wb") as file:
+                pickle.dump(self, file)
+                print(file)
+        except Exception as e:
+            print(f"Error during serialization: {e}")
 
     @classmethod
     def deserialize(cls, filename):
-        with open(filename, "rb") as file:
-            return pickle.load(file)
+        try:
+            with open(filename, "rb") as file:
+                return pickle.load(file)
+        except Exception as e:
+            print(f"Erorr during deserialisatoin {e}")
 
 # obj = CustomObject(name="John", age=25, is_student=True)
 # print("Original Object:")
