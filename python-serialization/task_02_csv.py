@@ -6,7 +6,8 @@ import json
 def convert_csv_to_json(csv_file):
     """
         Converting csv data to json
-        
+        Args:
+            csv_file: csv file to be converted
         Returns:
             Boolean
     """
