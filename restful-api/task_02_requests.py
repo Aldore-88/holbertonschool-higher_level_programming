@@ -11,9 +11,10 @@ def fetch_and_print_posts():
     input_url = "https://jsonplaceholder.typicode.com/posts"
 
     data = requests.get(input_url)
-    print(data.text)
+    print(f"Status Code: {data.status_code}")
     # print(data.text)
-    print(f"json data {data.json()}") #data inside of json
+    # print(data.text)
+    # print(f"json data {data.json()}") #data inside of json
     # print(data.json) #refers to the json object with the data
     # print()
 
