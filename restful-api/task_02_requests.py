@@ -20,11 +20,15 @@ def fetch_and_print_posts():
     if data.status_code == 200:
         data_json = data.json()
         # print("Success")
+        """
         if isinstance(data_json, list):
             for post in data_json:
                 print(post["title"])
         elif isinstance(data_json, dict):
             print(data_json["title"])
+        """
+        for post in data_json:
+            print(post["title"])
 
 def fetch_and_save_posts():
     """
