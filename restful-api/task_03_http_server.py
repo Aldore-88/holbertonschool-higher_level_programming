@@ -2,7 +2,7 @@ from http.server import BaseHTTPRequestHandler, HTTPServer
 import socketserver
 import json
 
-HOST = "localhost"
+HOST = "localhost" #localhost is standard can use ""
 PORT = 8000
 
 
@@ -34,7 +34,7 @@ class Handler(BaseHTTPRequestHandler):
         
         else:
             self.send_response(404)
-            self.send_header("Content-type", "text/html")
+            self.send_header("Content-type", "text/plain")
             self.end_headers()
             self.wfile.write(b"404 Endpoint not found")
 
