@@ -1,10 +1,13 @@
 #!/usr/bin/python3
-
+"""2.Consuming and processing data from an API usng Python"""
 import requests
 import csv
 
 
 def fetch_and_print_posts():
+    """
+        Fetches all posts from JSONPlaceholder and prints
+    """
     input_url = "https://jsonplaceholder.typicode.com/posts"
 
     data = requests.get(input_url)
@@ -24,6 +27,9 @@ def fetch_and_print_posts():
             print(data_json["title"])
 
 def fetch_and_save_posts():
+    """
+        Fetches and saves posts from JSONPlaceholder and saves into posts.csv
+    """
     input_url = "https://jsonplaceholder.typicode.com/posts"
     
     data = requests.get(input_url)
