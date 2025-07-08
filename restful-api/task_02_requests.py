@@ -42,11 +42,11 @@ def fetch_and_save_posts():
         }
         all_data.append(item_list) #everything into one big list
     # print(all_data)
-
+### something is wrong here
     csv_file = "posts.csv"
-    with open(csv_file, "w"):
+    with open(csv_file, "w") as csv_file_obj:
         values = ["id", "title", "body"]
-        writer = csv.DictWriter(csv_file, values)
+        writer = csv.DictWriter(csv_file_obj, fieldnames=values)
         writer.writeheader()
         writer.writerows(all_data)
 
