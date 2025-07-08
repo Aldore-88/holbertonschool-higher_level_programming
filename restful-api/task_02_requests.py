@@ -61,6 +61,5 @@ def fetch_and_save_posts():
         writer.writeheader()
         writer.writerows(all_data)
 
-
-fetch_and_print_posts()
-fetch_and_save_posts()
+# fetch_and_print_posts()
+# fetch_and_save_posts()
