@@ -27,8 +27,8 @@ def get_user(username):
     return (jsonify(users.get(username)))
 
 @app.route("/add_user", methods=["POST"])
-def add_data(input_data):
-    user_data = request.get_json(input_data) #gets the json data that is input from client
+def add_data():
+    user_data = request.get_json() #gets the json data that is input from client
     user_id = user_data.get("username") #reads the user_data and gets "username"s
 
     if not user_id:
