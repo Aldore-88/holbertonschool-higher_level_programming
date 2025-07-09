@@ -9,7 +9,7 @@ def home():
     return ("Welcome to the Flask API!")
 
 @app.route('/data')
-def data():
+def data(): #gets list of all the users
     users_keys = list(users.keys())
     # print(users_keys)
     # print(users.keys())
