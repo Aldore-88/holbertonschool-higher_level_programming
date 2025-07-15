@@ -3,7 +3,7 @@
 
 -- execute: cat 10-top_score.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
 
-SELECT * FROM second_table
+SELECT score, name FROM second_table
 ORDER by score DESC;
 
 --https://www.w3schools.com/sql/sql_orderby.asp
