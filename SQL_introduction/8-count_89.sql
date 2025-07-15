@@ -6,6 +6,6 @@
 USE hbtn_0c_0;
 SELECT COUNT(id) 
 FROM first_table
-WHERE 89;
+WHERE id = 89;
 
 -- https://www.w3schools.com/sql/sql_count.asp
