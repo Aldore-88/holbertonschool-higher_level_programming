@@ -6,4 +6,5 @@
 SELECT score, name FROM second_table
 ORDER by score DESC;
 
---https://www.w3schools.com/sql/sql_orderby.asp
+-- https://www.w3schools.com/sql/sql_orderby.asp
+-- https://www.w3schools.com/sql/sql_select.asp
