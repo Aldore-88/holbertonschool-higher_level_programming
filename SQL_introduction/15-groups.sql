@@ -3,7 +3,7 @@
 
 -- execute: cat 15-groups.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
 
-SELECT score, COUNT(score) AS number
+SELECT score, COUNT(*) AS number
 FROM second_table
 GROUP BY score;
 
