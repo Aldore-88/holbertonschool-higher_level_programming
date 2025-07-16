@@ -15,5 +15,4 @@ CREATE TABLE IF NOT EXISTS unique_id
     name VARCHAR(256)
 );
 
-
 -- https://www.w3schools.com/sql/sql_unique.asp
