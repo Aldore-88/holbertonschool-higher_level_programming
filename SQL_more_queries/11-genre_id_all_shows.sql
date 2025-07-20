@@ -1,4 +1,4 @@
--- Genre ID for all shows
+-- 11.Genre ID for all shows
 -- Write a script that lists all shows contained in the database hbtn_0d_tvshows.
 
 -- cat 11-genre_id_all_shows.sql | mysql -hlocalhost -uroot -p hbtn_0d_tvshows
