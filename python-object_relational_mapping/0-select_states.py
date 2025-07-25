@@ -13,7 +13,7 @@ db = MySQLdb.connect(
     passwd="",
     db=sys.argv[3]
     )
-
+"""here?"""
 cur = db.cursor()
 
 cur.execute("SELECT * FROM states ORDER BY id ASC;")
