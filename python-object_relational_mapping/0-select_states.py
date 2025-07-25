@@ -4,6 +4,8 @@
 import MySQLdb
 import sys
 
+"""hello"""
+
 db = MySQLdb.connect(
     host="localhost",
     port=3306,
