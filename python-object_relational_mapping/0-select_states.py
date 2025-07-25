@@ -11,3 +11,11 @@ db = MySQLdb.connect(
     )
 
 cur = db.cursor()
+
+cur.execute("SELECT * FROM states ORDER BY id ASC;")
+rows = cur.fetchall()
+for row in rows:
+    print(row)
+
+cur.close()
+db.close()
