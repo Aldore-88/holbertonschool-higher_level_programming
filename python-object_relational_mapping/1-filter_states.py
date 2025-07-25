@@ -4,6 +4,7 @@
 import MySQLdb
 import sys
 
+
 def filter_states_by_N(username, password, database):
     """filtering by states name starting with N"""
     db = MySQLdb.connect(
@@ -14,7 +15,7 @@ def filter_states_by_N(username, password, database):
         db=database
     )
 
-    cur=db.cursor()
+    cur = db.cursor()
     # SQL command
     cur.execute("SELECT * FROM states WHERE name LIKE 'n%' ORDER BY id ASC;")
     rows = cur.fetchall()
@@ -23,6 +24,7 @@ def filter_states_by_N(username, password, database):
 
     cur.close()
     db.close()
+
 
 if __name__ == "__main__":
     """stops execute when imported"""
