@@ -4,22 +4,26 @@
 import MySQLdb
 import sys
 
-"""hello"""
+def get_all_states(username, password, database):
+    """connects to database and pulls all rows"""
+    db = MySQLdb.connect(
+        host="localhost",
+        port=3306,
+        user=username,
+        passwd=password,
+        db=database
+        )
 
-db = MySQLdb.connect(
-    host="localhost",
-    port=3306,
-    user=sys.argv[1],
-    passwd="",
-    db=sys.argv[3]
-    )
-"""here?"""
-cur = db.cursor()
-"""here?"""
-cur.execute("SELECT * FROM states ORDER BY id ASC;")
-rows = cur.fetchall()
-for row in rows:
-    print(row)
-"""here?"""
-cur.close()
-db.close()
+    cur = db.cursor()
+
+    cur.execute("SELECT * FROM states ORDER BY id ASC;")
+    rows = cur.fetchall()
+    for row in rows:
+        print(row)
+
+    cur.close()
+    db.close()
+
+if __name__ == "__main__":
+    """stops from executing when imported"""
+    get_all_states(sys.argv[1], sys.argv[2], sys.argv[3])
