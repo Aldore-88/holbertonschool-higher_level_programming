@@ -15,11 +15,11 @@ db = MySQLdb.connect(
     )
 """here?"""
 cur = db.cursor()
-
+"""here?"""
 cur.execute("SELECT * FROM states ORDER BY id ASC;")
 rows = cur.fetchall()
 for row in rows:
     print(row)
-
+"""here?"""
 cur.close()
 db.close()
