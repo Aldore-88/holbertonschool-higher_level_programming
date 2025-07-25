@@ -4,6 +4,7 @@
 import MySQLdb
 import sys
 
+
 def get_all_states(username, password, database):
     """connects to database and pulls all rows"""
     db = MySQLdb.connect(
@@ -23,6 +24,7 @@ def get_all_states(username, password, database):
 
     cur.close()
     db.close()
+
 
 if __name__ == "__main__":
     """stops from executing when imported"""
