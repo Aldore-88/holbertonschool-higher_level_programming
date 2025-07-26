@@ -16,10 +16,13 @@ def filter_by_user_input(username, password, database, input_filter):
 
     cur = db_connect.cursor()
 
-    """can also use {0}"""
+    """
+    can also use {0}
+    LIKE BINARY for case senstitive
+    """
     cur.execute(
         "SELECT * FROM states "
-        "WHERE name = '{}' "
+        "WHERE LIKE BINARY '{}' "
         "ORDER BY id ASC;".format(input_filter)
     )
 
