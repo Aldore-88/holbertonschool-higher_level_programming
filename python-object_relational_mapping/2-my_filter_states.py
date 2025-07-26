@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+"""2.Filter by user input"""
 import MySQLdb
 import sys
 
@@ -18,7 +18,7 @@ def filter_by_user_input(username, password, database, input_filter):
 
     cur.execute(
         "SELECT * FROM states "
-        "WHERE name = '{}' "
+        "WHERE name = '{}' " #can also use {0}
         "ORDER BY id ASC;".format(input_filter)
     )
 
@@ -28,6 +28,7 @@ def filter_by_user_input(username, password, database, input_filter):
 
     cur.close()
     db_connect.close()
+
 
 if __name__ == "__main__":
     """stops execute when imported"""
