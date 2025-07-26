@@ -22,7 +22,7 @@ def filter_by_user_input(username, password, database, input_filter):
     """
     cur.execute(
         "SELECT * FROM states "
-        "WHERE LIKE BINARY '{}' "
+        "WHERE name LIKE BINARY '{}' "
         "ORDER BY id ASC;".format(input_filter)
     )
 
