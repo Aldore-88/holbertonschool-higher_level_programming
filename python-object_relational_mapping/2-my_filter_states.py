@@ -16,9 +16,10 @@ def filter_by_user_input(username, password, database, input_filter):
 
     cur = db_connect.cursor()
 
+    """can also use {0}"""
     cur.execute(
         "SELECT * FROM states "
-        "WHERE name = '{}' " #can also use {0}
+        "WHERE name = '{}' "
         "ORDER BY id ASC;".format(input_filter)
     )
 
