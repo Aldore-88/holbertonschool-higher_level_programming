@@ -4,6 +4,7 @@
 import MySQLdb
 import sys
 
+
 def filter_cities_by_state(username, password, database):
     """filtering cities by state, joining tables by state_id"""
     db_connect = MySQLdb.connect(
@@ -28,6 +29,7 @@ def filter_cities_by_state(username, password, database):
 
     cur.close
     db_connect.close
+
 
 if __name__ == "__main__":
     """stops execute on import"""
