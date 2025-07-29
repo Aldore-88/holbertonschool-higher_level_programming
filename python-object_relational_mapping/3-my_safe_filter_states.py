@@ -4,6 +4,7 @@
 import MySQLdb
 import sys
 
+
 def safe_filter_by_user_input(username, password, database, input_filter):
     """stopping sql injection by using the %s parameter"""
     db_connect = MySQLdb.connect(
@@ -28,4 +29,6 @@ def safe_filter_by_user_input(username, password, database, input_filter):
 
 if __name__ == "__main__":
     """stops execute on import"""
-    safe_filter_by_user_input(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4])
+    safe_filter_by_user_input(
+        sys.argv[1], sys.argv[2],
+        sys.argv[3], sys.argv[4])
