@@ -11,7 +11,7 @@ def filter_by_state_argument(username, password, database, filter_by_state):
         host="localhost",
         port=3306,
         user=username,
-        passwd="",
+        passwd=password,
         db=database
     )
 
