@@ -21,7 +21,8 @@ if __name__ == "__main__":
 
     """searches state for the input name"""
     state_search = sys.argv[4]
-    state = session.query(State).order_by(State.id).filter(State.name == state_search).first()
+    state = session.query(State).order_by(State.id).filter(
+        State.name == state_search).first()
     if state is None:
         print("Not found")
     else:
