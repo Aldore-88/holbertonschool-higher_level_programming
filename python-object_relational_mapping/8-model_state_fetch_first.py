@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""7.All states via SQLAlchemy"""
+"""Start link class to table in database"""
 import sys
 from model_state import Base, State
 from sqlalchemy import (create_engine)  # database connection creator
@@ -18,7 +18,13 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     """creates actual session?? why??"""
     session = Session()
-    for state in session.query(State).order_by(State.id).all():
-        print("{}: {}".format(state.id, state.name))
+
+    """first session - no session = Nothing"""
+    first_session = session.query(State).order_by(State.id).first()
+    if State is None:
+        print()
+    else:
+        print("{}: {}".format(first_session.id, first_session.name))
+
     """close session"""
     session.close()
