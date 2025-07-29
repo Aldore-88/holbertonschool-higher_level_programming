@@ -30,10 +30,11 @@ def filter_by_state_argument(username, password, database, filter_by_state):
     i = 0
     while i < length:
         if i == length - 1:
-            print(rows[i][0])
+            print(rows[i][0], end="")
         else:
             print(rows[i][0], end=", ")
         i += 1
+    print()
 
     cur.close
     db_connect.close
