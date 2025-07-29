@@ -22,7 +22,7 @@ if __name__ == "__main__":
     """first session - no session = Nothing"""
     first_session = session.query(State).order_by(State.id).first()
     if State is None:
-        print()
+        print("Nothing")
     else:
         print("{}: {}".format(first_session.id, first_session.name))
 
