@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-"""11.Add a new state"""
+"""12.Update a state"""
 import sys
 from model_state import Base, State
 from sqlalchemy import (create_engine)  # database connection creator
 from sqlalchemy.orm import sessionmaker  # session factory creator
-from sqlalchemy import (create_engine)
+from sqlalchemy import (create_engine, update)
 
 
 if __name__ == "__main__":
@@ -19,11 +19,11 @@ if __name__ == "__main__":
     """creates actual session?? why??"""
     session = Session()
 
-    """adding Louisiana"""
-    new_state = State(name="Louisiana")
-    session.add(new_state)
+    """update state of id:2"""
+    state = session.query(State).filter(State.id == 2)
+    state.update({State.name: "New Mexico"})
+    """need to commit changes"""
     session.commit()
-    print(new_state.id)
 
     """close session"""
     session.close()
