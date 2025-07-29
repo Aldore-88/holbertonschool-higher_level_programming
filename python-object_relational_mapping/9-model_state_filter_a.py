@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""8.First state"""
+"""9.Contains 'a'"""
 import sys
 from model_state import Base, State
 from sqlalchemy import (create_engine)  # database connection creator
@@ -19,12 +19,12 @@ if __name__ == "__main__":
     """creates actual session?? why??"""
     session = Session()
 
-    """first session - no session = Nothing"""
-    first_state = session.query(State).order_by(State.id).first()
-    if first_state is None:
-        print("Nothing")
-    else:
-        print("{}: {}".format(first_state.id, first_state.name))
+    """checks for 'a' in state"""
+    state_list = session.query(State).order_by(
+        State.id).filter(State.name.contains("a")).all()
+
+    for state in state_list:
+        print("{}: {}".format(state.id, state.name))
 
     """close session"""
     session.close()
