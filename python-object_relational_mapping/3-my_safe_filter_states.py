@@ -5,6 +5,7 @@ import MySQLdb
 import sys
 
 def safe_filter_by_user_input(username, password, database, input_filter):
+    """stopping sql injection by using the %s parameter"""
     db_connect = MySQLdb.connect(
         host="localhost",
         port=3306,
