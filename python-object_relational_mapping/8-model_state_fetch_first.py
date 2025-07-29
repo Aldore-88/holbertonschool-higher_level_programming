@@ -20,11 +20,11 @@ if __name__ == "__main__":
     session = Session()
 
     """first session - no session = Nothing"""
-    first_session = session.query(State).order_by(State.id).first()
-    if State is None:
+    first_state = session.query(State).order_by(State.id).first()
+    if first_state is None:
         print("Nothing")
     else:
-        print("{}: {}".format(first_session.id, first_session.name))
+        print("{}: {}".format(first_state.id, first_state.name))
 
     """close session"""
     session.close()
