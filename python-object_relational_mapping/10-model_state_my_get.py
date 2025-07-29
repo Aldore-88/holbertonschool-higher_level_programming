@@ -21,12 +21,11 @@ if __name__ == "__main__":
 
     """searches state for the input name"""
     state_search = sys.argv[4]
-    states = session.query(State).order_by(State.id).filter(State.name == state_search).all()
-    if states is None:
+    state = session.query(State).order_by(State.id).filter(State.name == state_search).first()
+    if state is None:
         print("Not found")
     else:
-        for state in states:
-            print(state.id)
+        print(state.id)
 
     """close session"""
     session.close()
