@@ -14,5 +14,5 @@ fetch(URL_json)
     })
     .then((data) => {
         console.log("Second .then() received:", data);
-        ActorName.textContent = data.name;
+        character_element.textContent = data.name;
     });
