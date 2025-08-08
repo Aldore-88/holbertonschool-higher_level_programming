@@ -1,3 +1,9 @@
+#!/usr/bin/node
+/*
+4.List of elements
+Write a JavaScript script that adds a li element to a list when the user clicks on the element with id add_item
+*/
+
 const add_item_element = document.getElementById("add_item");
 const my_list_element = document.querySelector(".my_list");
 
