@@ -8,7 +8,7 @@ const list_element = document.getElementById("list_movies");
 
 fetch(URL_data)
     .then((response) => {
-        return response.json();
+        return response.json()
     })
     .then((data_json) => {
         // console.log("received:", data_json.results);
