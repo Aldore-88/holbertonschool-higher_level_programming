@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-num_args = process.argv.length;
+let num_args = process.argv.length;
 num_args = num_args - 2;
 
 if (num_args < 1) {
