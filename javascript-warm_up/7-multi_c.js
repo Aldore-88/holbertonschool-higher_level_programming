@@ -5,7 +5,7 @@
 const maxCount = parseInt(process.argv[2]);
 
 if (isNaN(maxCount)) {
-  'Missing number of occurances';
+  console.log('Missing number of occurances');
 } else {
   let count = 0;
   while (count < maxCount) {
