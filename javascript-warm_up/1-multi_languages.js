@@ -1,4 +1,6 @@
 #!/usr/bin/node
+// 1. 3 languages
+// Write a script that prints 3 lines:
 
 console.log('C is fun');
 console.log('Python is cool');
