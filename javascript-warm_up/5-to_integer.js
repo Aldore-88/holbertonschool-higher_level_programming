@@ -3,7 +3,7 @@
 // Write a script that prints My number: <first argument converted in integer> if the first argument can be converted to an integer:
 
 const arg = process.argv;
-isNum = parseInt(arg[2]);
+const isNum = parseInt(arg[2]);
 
 if (isNaN(isNum)) {
   console.log('Not a number');
