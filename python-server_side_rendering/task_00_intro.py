@@ -16,12 +16,13 @@ def generate_invitations(template, attendees):
         # print(attendee["event_location"])
         # print(f"attendee {count}")
         # data_in_template = template
-        data_in_template = template.replace("{name}",attendee["name"]).replace("{event_date}",attendee["event_date"]).replace("{event_location}",attendee["event_location"])
+        data_in_template = template.replace("{name}",attendee["name"]).replace("{event_title}",attendee["event_title"]).replace("{event_date}",attendee["event_date"]).replace("{event_location}",attendee["event_location"])
         # data_in_template = data_in_template.replace({"{name}":"hello"})
-
+# dictionary of {name} {event_title} ect. (for looping through) to run try except to handle errors, replacing error with "N/A" Loop through
         with open(f"output_{count}.txt", "w") as file:
             file.write(data_in_template)
 
+        print(count)
         count += 1
 
 # Read the template from a file
